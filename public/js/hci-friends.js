@@ -3,6 +3,11 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+
+	$(".name-link").click(function() {
+		var oldText = $(this).find("h3").text();
+		$(this).find("h3").text(anagrammedName(oldText));
+	});
 })
 
 /*
